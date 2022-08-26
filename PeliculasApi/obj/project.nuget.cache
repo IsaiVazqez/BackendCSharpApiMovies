@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "n+s87/j8+zLFDiktoEJnTlwmGctA/X9mqXzKdubAzeyc6YSVDH+V4LLDHK+BhjrAg8XHMNaQHGEaGE8Mv1xDww==",
+  "dgSpecHash": "ou/zYz5XLQTEWrTDmjW0bXx+oyh5cpYPEv5b/u8GSDH3wkJq7KPhYGm9TdTn2/y+/QPd84rbTP9aTrpHh5kexA==",
   "success": true,
   "projectFilePath": "C:\\Users\\7yuvr\\source\\repos\\PeliculasApi\\PeliculasApi\\PeliculasApi.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,8 @@
     "C:\\Users\\7yuvr\\.nuget\\packages\\azure.storage.blobs\\12.14.0-beta.1\\azure.storage.blobs.12.14.0-beta.1.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\azure.storage.common\\12.13.0-beta.1\\azure.storage.common.12.13.0-beta.1.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\7yuvr\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.0\\microsoft.aspnetcore.jsonpatch.6.0.0.nupkg.sha512",
+    "C:\\Users\\7yuvr\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.0\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.0.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.0-preview2.22096.2\\microsoft.data.sqlclient.5.0.0-preview2.22096.2.nupkg.sha512",
@@ -43,6 +45,8 @@
     "C:\\Users\\7yuvr\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\7yuvr\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\7yuvr\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",

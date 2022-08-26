@@ -76,3 +76,9 @@ C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\obj\Debug\net6.0\Peliculas
 C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\Azure.Storage.Blobs.dll
 C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\Azure.Storage.Common.dll
 C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\System.IO.Hashing.dll
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\libman.json
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\PeliculasApi.staticwebassets.runtime.json
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
