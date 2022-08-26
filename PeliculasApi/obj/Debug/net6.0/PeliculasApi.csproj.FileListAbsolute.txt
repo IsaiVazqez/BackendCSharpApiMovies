@@ -73,3 +73,6 @@ C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\AutoMappe
 C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\obj\Debug\net6.0\PeliculasApi.Properties.Resources.resources
 C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\obj\Debug\net6.0\PeliculasApi.csproj.GenerateResource.cache
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\Azure.Storage.Blobs.dll
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\Azure.Storage.Common.dll
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\System.IO.Hashing.dll
