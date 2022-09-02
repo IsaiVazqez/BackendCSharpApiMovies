@@ -6,6 +6,7 @@ using PeliculasApi.DTOs;
 using PeliculasApi.Entities;
 using PeliculasApi.Helpers;
 using PeliculasApi.Services;
+using System.Linq.Dynamic.Core;
 
 namespace PeliculasApi.Controllers
 {
@@ -16,14 +17,17 @@ namespace PeliculasApi.Controllers
         private readonly ApplicationDbContext context;
         private readonly IMapper mapper;
         private readonly IAlmacenadorArchivos almacenadorArchivos;
+        private readonly ILogger<PeliculasController> logger;
         private readonly string contenedor = "peliculas";
 
         public PeliculasController(ApplicationDbContext context,
-            IMapper mapper, IAlmacenadorArchivos almacenadorArchivos)
+            IMapper mapper, IAlmacenadorArchivos almacenadorArchivos,
+            ILogger<PeliculasController> logger)
         {
             this.context = context;
             this.mapper = mapper;
             this.almacenadorArchivos = almacenadorArchivos;
+            this.logger = logger;
         }
 
         [HttpGet]
@@ -80,6 +84,21 @@ namespace PeliculasApi.Controllers
                 peliculasQueryable = peliculasQueryable
                     .Where(x => x.PeliculasGeneros.Select(y => y.GeneroId)
                     .Contains(filtroPeliculasDTO.GeneroId));
+            }
+
+            if(!string.IsNullOrEmpty(filtroPeliculasDTO.CampoOrdennar))
+            {
+                var tipoOrden = filtroPeliculasDTO.OrdenAscendente ? "ascending" : "descending";
+
+                try
+                {
+                    peliculasQueryable = peliculasQueryable.OrderBy($"{filtroPeliculasDTO.CampoOrdennar}titulo ascending");
+
+                }
+                catch(Exception ex)
+                {
+                    logger.LogError(ex.Message, ex);
+                }
             }
 
             await HttpContext.InsertarParametrosPaginacion(peliculasQueryable,
