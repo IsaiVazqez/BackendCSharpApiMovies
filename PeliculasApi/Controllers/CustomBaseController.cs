@@ -48,5 +48,35 @@ namespace PeliculasApi.Controllers
 
             return new CreatedAtRouteResult(nombreRuta, new { id = entidad.Id }, dtoLectura);
         }
+
+        protected async Task<ActionResult> Put<TCreacion, TEntidad>
+            (int id, TCreacion creacionDTO) where TEntidad : class, IId
+        {
+            var entidad = mapper.Map<Genero>(creacionDTO);
+
+            entidad.Id = id;
+
+            context.Entry(entidad).State = EntityState.Modified;
+
+            await context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        protected async Task<ActionResult> Delete<TEntidad>(int id) where TEntidad: class, IId, new()
+        {
+            var existe = await context.Set<TEntidad>().AnyAsync(x => x.Id == id);
+
+            if (!existe)
+            {
+                return NotFound();
+            }
+
+            context.Remove(new TEntidad() { Id = id });
+
+            await context.SaveChangesAsync();
+
+            return NoContent();
+        }
     }
 }
