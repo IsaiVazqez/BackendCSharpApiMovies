@@ -166,3 +166,4 @@ C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\obj\Debug\net6.0\refint\Pe
 C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\obj\Debug\net6.0\PeliculasApi.pdb
 C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\obj\Debug\net6.0\PeliculasApi.genruntimeconfig.cache
 C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\obj\Debug\net6.0\ref\PeliculasApi.dll
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
