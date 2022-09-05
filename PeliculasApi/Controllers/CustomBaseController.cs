@@ -56,7 +56,7 @@ namespace PeliculasApi.Controllers
         protected async Task<ActionResult> Put<TCreacion, TEntidad>
             (int id, TCreacion creacionDTO) where TEntidad : class, IId
         {
-            var entidad = mapper.Map<Genero>(creacionDTO);
+            var entidad = mapper.Map<TEntidad>(creacionDTO);
 
             entidad.Id = id;
 

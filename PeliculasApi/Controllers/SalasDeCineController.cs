@@ -35,7 +35,7 @@ namespace PeliculasApi.Controllers
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] SalaDeCineCreacionDTO salaDeCineCreacionDTO)
         {
-            return await Post<SalaDeCineCreacionDTO, SalaDeCine, SalaDeCine>(salaDeCineCreacionDTO, "obtenerSalaDeCine");
+            return await Post<SalaDeCineCreacionDTO, SalaDeCine, SalaDeCineDTO>(salaDeCineCreacionDTO, "obtenerSalaDeCine");
         }
 
         [HttpPut("{id:int}")]
@@ -44,7 +44,7 @@ namespace PeliculasApi.Controllers
             return await Put<SalaDeCineCreacionDTO, SalaDeCine>(id, salaDeCineCreacionDTO);
         }
 
-        [HttpDelete]
+        [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
         {
             return await Delete<SalaDeCine>(id);
