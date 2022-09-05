@@ -1,7 +1,10 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using PeliculasApi.DTOs;
 using PeliculasApi.Entities;
+using PeliculasApi.Helpers;
 
 namespace PeliculasApi.Controllers
 {
@@ -15,6 +18,7 @@ namespace PeliculasApi.Controllers
             this.mapper = mapper;
         }
 
+        //Peticiónes reutilizables para Géneros
         protected async Task<List<TDTO>> Get<TEntidad, TDTO>() where TEntidad : class
         {
             var entidades = await context.Set<TEntidad>().AsNoTracking().ToListAsync();
@@ -73,6 +77,46 @@ namespace PeliculasApi.Controllers
             }
 
             context.Remove(new TEntidad() { Id = id });
+
+            await context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+        //Petición reutilizable para Actores con paginación
+        protected async Task<List<TDTO>> Get<TEntidad, TDTO>(PaginacionDTO paginacionDTO) where TEntidad : class
+        {
+            var queryable = context.Set<TEntidad>().AsQueryable();
+
+            await HttpContext.InsertarParametrosPaginacion(queryable, paginacionDTO.CantidadRegistrosPorPagina);
+
+            var entidades = await queryable.Paginar(paginacionDTO).ToListAsync();
+
+            return mapper.Map<List<TDTO>>(entidades);
+        }
+
+        protected async Task<ActionResult> Patch<TEntidad, TDTO>(int id, JsonPatchDocument<TDTO> patchDocument)
+            where TDTO : class
+            where TEntidad : class, IId
+        {
+            if (patchDocument == null)
+            {
+                return BadRequest();
+            }
+
+            var entidadDB = await context.Set<TEntidad>().FirstOrDefaultAsync(x => x.Id == id);
+
+            if (entidadDB == null)
+            { return BadRequest(); }
+
+            var entidadDTO = mapper.Map<TDTO>(entidadDB);
+
+            patchDocument.ApplyTo(entidadDTO, ModelState);
+
+            var esValido = TryValidateModel(entidadDTO);
+
+            if (!esValido)
+            { return BadRequest(ModelState); }
 
             await context.SaveChangesAsync();
 

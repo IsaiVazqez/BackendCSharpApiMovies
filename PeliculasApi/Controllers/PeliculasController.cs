@@ -12,7 +12,7 @@ namespace PeliculasApi.Controllers
 {
     [ApiController]
     [Route("api/peliculas")]
-    public class PeliculasController: ControllerBase
+    public class PeliculasController: CustomBaseController
     {
         private readonly ApplicationDbContext context;
         private readonly IMapper mapper;
@@ -22,7 +22,7 @@ namespace PeliculasApi.Controllers
 
         public PeliculasController(ApplicationDbContext context,
             IMapper mapper, IAlmacenadorArchivos almacenadorArchivos,
-            ILogger<PeliculasController> logger)
+            ILogger<PeliculasController> logger) : base(context, mapper)
         {
             this.context = context;
             this.mapper = mapper;
@@ -186,46 +186,14 @@ namespace PeliculasApi.Controllers
         [HttpPatch("{id}")]
         public async Task<ActionResult> Patch(int id, [FromBody] JsonPatchDocument<PeliculaPatchDTO> patchDocument)
         {
-            if (patchDocument == null)
-            {
-                return BadRequest();
-            }
-
-            var entidadDB = await context.Peliculas.FirstOrDefaultAsync(x => x.Id == id);
-
-            if (entidadDB == null)
-            { return BadRequest(); }
-
-            var entidadDTO = mapper.Map<PeliculaPatchDTO>(entidadDB);
-
-            patchDocument.ApplyTo(entidadDTO, ModelState);
-
-            var esValido = TryValidateModel(entidadDTO);
-
-            if (!esValido)
-            { return BadRequest(ModelState); }
-
-            await context.SaveChangesAsync();
-
-            return NoContent();
+            return await Patch<Pelicula, PeliculaPatchDTO>(id, patchDocument);
 
         }
 
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(int id)
         {
-            var existe = await context.Peliculas.AnyAsync(x => x.Id == id);
-
-            if (!existe)
-            {
-                return NotFound();
-            }
-
-            context.Remove(new Pelicula() { Id = id });
-
-            await context.SaveChangesAsync();
-
-            return NoContent();
+            return await Delete<Pelicula>(id);
         }
 
     }
