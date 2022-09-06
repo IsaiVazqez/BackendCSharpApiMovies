@@ -167,3 +167,7 @@ C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\obj\Debug\net6.0\Peliculas
 C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\obj\Debug\net6.0\PeliculasApi.genruntimeconfig.cache
 C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\obj\Debug\net6.0\ref\PeliculasApi.dll
 C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\System.Linq.Dynamic.Core.dll
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.NetTopologySuite.dll
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\NetTopologySuite.dll
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\bin\Debug\net6.0\NetTopologySuite.IO.SqlServerBytes.dll
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApi\obj\Debug\net6.0\EFCoreSqlServerNetTopologySuite.cs

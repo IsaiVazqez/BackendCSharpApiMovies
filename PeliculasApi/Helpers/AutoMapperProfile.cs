@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using NetTopologySuite;
+using NetTopologySuite.Geometries;
 using PeliculasApi.DTOs;
 using PeliculasApi.Entities;
 
@@ -6,13 +8,22 @@ namespace PeliculasApi.Helpers
 {
     public class AutoMapperProfile: Profile
     {
-        public AutoMapperProfile()
+        public AutoMapperProfile(GeometryFactory geometryFactory)
         {
             CreateMap<Genero, GeneroDTO>().ReverseMap();
             CreateMap<GeneroCreacionDTO, Genero>();
 
-            CreateMap<SalaDeCine, SalaDeCineDTO>().ReverseMap();
-            CreateMap<SalaDeCineCreacionDTO, SalaDeCine>();
+            CreateMap<SalaDeCine, SalaDeCineDTO>()
+                .ForMember(x => x.Latitud, x => x.MapFrom(y => y.Ubicacion.Y))
+                .ForMember(x => x.Longitud, x => x.MapFrom(y => y.Ubicacion.X));
+
+
+
+            CreateMap<SalaDeCineDTO, SalaDeCine>()
+                .ForMember(x => x.Ubicacion, x => x.MapFrom(y => geometryFactory.CreatePoint(new Coordinate(y.Longitud, y.Latitud))));
+
+            CreateMap<SalaDeCineCreacionDTO, SalaDeCine>()
+                .ForMember(x => x.Ubicacion, x => x.MapFrom(y => geometryFactory.CreatePoint(new Coordinate(y.Longitud, y.Latitud))));
 
             CreateMap<Actor, ActorDTO>().ReverseMap();
             CreateMap<ActorCreacionDTO, Actor>().ForMember(x => x.Foto, options => options.Ignore());
