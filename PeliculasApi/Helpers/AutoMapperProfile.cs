@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Identity;
 using NetTopologySuite;
 using NetTopologySuite.Geometries;
 using PeliculasApi.DTOs;
@@ -17,7 +18,7 @@ namespace PeliculasApi.Helpers
                 .ForMember(x => x.Latitud, x => x.MapFrom(y => y.Ubicacion.Y))
                 .ForMember(x => x.Longitud, x => x.MapFrom(y => y.Ubicacion.X));
 
-
+            CreateMap<IdentityUser, UsuarioDTO>();
 
             CreateMap<SalaDeCineDTO, SalaDeCine>()
                 .ForMember(x => x.Ubicacion, x => x.MapFrom(y => geometryFactory.CreatePoint(new Coordinate(y.Longitud, y.Latitud))));
