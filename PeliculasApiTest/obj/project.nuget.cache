@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lFXf/yOlMkAFCWspu7Tee9AwQfwHz8LLG8nrm6Eeebj7ASlsKv+VL46lCV2g8C8i4KWPvYNSP5Le2uATKOu5mA==",
+  "dgSpecHash": "kA0XfmcS3o3TOv90kakzHCca3MeY3vMQfUI0y0RziZAA9QKZOwTV5ioisYDbUz9ducyUMYkhtqFojSc/0G/hfw==",
   "success": true,
   "projectFilePath": "C:\\Users\\7yuvr\\source\\repos\\PeliculasApi\\PeliculasApiTest\\PeliculasApiTest.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,7 @@
     "C:\\Users\\7yuvr\\.nuget\\packages\\azure.identity\\1.5.0\\azure.identity.1.5.0.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\azure.storage.blobs\\12.14.0-beta.1\\azure.storage.blobs.12.14.0-beta.1.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\azure.storage.common\\12.13.0-beta.1\\azure.storage.common.12.13.0-beta.1.nupkg.sha512",
+    "C:\\Users\\7yuvr\\.nuget\\packages\\castle.core\\5.1.0\\castle.core.5.1.0.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.8\\microsoft.aspnetcore.authentication.jwtbearer.6.0.8.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.8\\microsoft.aspnetcore.cryptography.internal.6.0.8.nupkg.sha512",
@@ -54,6 +55,7 @@
     "C:\\Users\\7yuvr\\.nuget\\packages\\microsoft.testplatform.testhost\\17.4.0-preview-20220726-02\\microsoft.testplatform.testhost.17.4.0-preview-20220726-02.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\7yuvr\\.nuget\\packages\\moq\\4.18.2\\moq.4.18.2.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\mstest.testadapter\\2.3.0-preview-20220810-02\\mstest.testadapter.2.3.0-preview-20220810-02.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\mstest.testframework\\2.3.0-preview-20220810-02\\mstest.testframework.2.3.0-preview-20220810-02.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\nettopologysuite\\2.3.0\\nettopologysuite.2.3.0.nupkg.sha512",
@@ -64,6 +66,7 @@
     "C:\\Users\\7yuvr\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.0\\system.diagnostics.diagnosticsource.5.0.0.nupkg.sha512",
+    "C:\\Users\\7yuvr\\.nuget\\packages\\system.diagnostics.eventlog\\6.0.0\\system.diagnostics.eventlog.6.0.0.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\system.drawing.common\\5.0.0\\system.drawing.common.5.0.0.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\system.formats.asn1\\5.0.0\\system.formats.asn1.5.0.0.nupkg.sha512",
     "C:\\Users\\7yuvr\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",

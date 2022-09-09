@@ -171,3 +171,5 @@ C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApiTest\obj\Debug\net6.0\refin
 C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApiTest\obj\Debug\net6.0\PeliculasApiTest.pdb
 C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApiTest\obj\Debug\net6.0\PeliculasApiTest.genruntimeconfig.cache
 C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApiTest\obj\Debug\net6.0\ref\PeliculasApiTest.dll
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApiTest\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\7yuvr\source\repos\PeliculasApi\PeliculasApiTest\bin\Debug\net6.0\Moq.dll
