@@ -26,9 +26,13 @@ namespace PeliculasApiTest.PruebasUnitarias
         public async Task CrearUsuario()
         {
             var nombreBD = Guid.NewGuid().ToString();
+
             await CrearUsuarioHelper(nombreBD);
+
             var context2 = ConstruirContext(nombreBD);
+
             var conteo = await context2.Users.CountAsync();
+
             Assert.AreEqual(1, conteo);
         }
 
@@ -36,14 +40,19 @@ namespace PeliculasApiTest.PruebasUnitarias
         public async Task UsuarioNoPuedeLoguearse()
         {
             var nombreBD = Guid.NewGuid().ToString();
+
             await CrearUsuarioHelper(nombreBD);
 
             var controller = ConstruirCuentasController(nombreBD);
+
             var userInfo = new UserInfo() { Email = "ejemplo@hotmail.com", Password = "malPassword" };
+
             var respuesta = await controller.Login(userInfo);
 
             Assert.IsNull(respuesta.Value);
+
             var resultado = respuesta.Result as BadRequestObjectResult;
+
             Assert.IsNotNull(resultado);
         }
 
@@ -51,12 +60,17 @@ namespace PeliculasApiTest.PruebasUnitarias
         public async Task UsuarioPuedeLoguearse()
         {
             var nombreBD = Guid.NewGuid().ToString();
+
             await CrearUsuarioHelper(nombreBD);
 
             var controller = ConstruirCuentasController(nombreBD);
+
             var userInfo = new UserInfo() { Email = "ejemplo@hotmail.com", Password = "Aa123456!" };
+
             var respuesta = await controller.Login(userInfo);
+
             Assert.IsNotNull(respuesta.Value);
+
             Assert.IsNotNull(respuesta.Value.Token);
         }
 
@@ -70,12 +84,18 @@ namespace PeliculasApiTest.PruebasUnitarias
         private CuentasController ConstruirCuentasController(string nombreBD)
         {
             var context = ConstruirContext(nombreBD);
+
             var miUserStore = new UserStore<IdentityUser>(context);
+
             var userManager = BuildUserManager(miUserStore);
+
             var mapper = ConfigurarAutoMapper();
 
+
             var httpContext = new DefaultHttpContext();
+
             MockAuth(httpContext);
+
             var signInManager = SetupSignInManager(userManager, httpContext);
 
             var miConfiguracion = new Dictionary<string, string>
