@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "Hash": "WQBE72/u4+hI5C2AjOxoQy5XYchzxcs6J2IjvR/EKiA=",
+  "Source": "PeliculasApiTest",
+  "BasePath": "_content/PeliculasApiTest",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\7yuvr\\source\\repos\\PeliculasApi\\PeliculasApi\\PeliculasApi.csproj",
+      "Version": 2,
+      "Source": "PeliculasApi",
+      "GetPublishAssetsTargets": "ComputeReferencedStaticWebAssetsPublishManifest;GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier"
+    }
+  ],
+  "DiscoveryPatterns": [
+    {
+      "Name": "PeliculasApi\\wwwroot",
+      "Source": "PeliculasApi",
+      "ContentRoot": "C:\\Users\\7yuvr\\source\\repos\\PeliculasApi\\PeliculasApi\\wwwroot\\",
+      "BasePath": "_content/PeliculasApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": []
+}
