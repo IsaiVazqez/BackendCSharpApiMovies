@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 
 namespace PeliculasApiTest.PruebasUnitarias
 {
+    [TestClass]
     public class ReviewsControllerTest: BasePruebas
     {
         [TestMethod]
