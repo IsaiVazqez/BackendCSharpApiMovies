@@ -37,14 +37,19 @@ namespace PeliculasApiTest.PruebasDeIntegracion
         public async Task ObtenerTodosLosGeneros()
         {
             var nombreBD = Guid.NewGuid().ToString();
+
             var factory = ConstruirWebApplicationFactory(nombreBD);
 
             var contexto = ConstruirContext(nombreBD);
+
             contexto.Generos.Add(new Genero() { Nombre = "Género 1" });
+
             contexto.Generos.Add(new Genero() { Nombre = "Género 2" });
+
             await contexto.SaveChangesAsync();
 
             var cliente = factory.CreateClient();
+
             var respuesta = await cliente.GetAsync(url);
 
             respuesta.EnsureSuccessStatusCode();
@@ -59,18 +64,25 @@ namespace PeliculasApiTest.PruebasDeIntegracion
         public async Task BorrarGenero()
         {
             var nombreBD = Guid.NewGuid().ToString();
+
             var factory = ConstruirWebApplicationFactory(nombreBD);
 
             var contexto = ConstruirContext(nombreBD);
+
             contexto.Generos.Add(new Genero() { Nombre = "Género 1" });
+
             await contexto.SaveChangesAsync();
 
             var cliente = factory.CreateClient();
+
             var respuesta = await cliente.DeleteAsync($"{url}/1");
+
             respuesta.EnsureSuccessStatusCode();
 
             var contexto2 = ConstruirContext(nombreBD);
+
             var existe = await contexto2.Generos.AnyAsync();
+
             Assert.IsFalse(existe);
         }
 
@@ -78,10 +90,13 @@ namespace PeliculasApiTest.PruebasDeIntegracion
         public async Task BorrarGeneroRetorna401()
         {
             var nombreBD = Guid.NewGuid().ToString();
+
             var factory = ConstruirWebApplicationFactory(nombreBD, ignorarSeguridad: false);
 
             var cliente = factory.CreateClient();
+
             var respuesta = await cliente.DeleteAsync($"{url}/1");
+
             Assert.AreEqual("Unauthorized", respuesta.ReasonPhrase);
         }
     }
