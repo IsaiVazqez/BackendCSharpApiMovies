@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "secrets1": {
+      "restored": true,
+      "restoreTime": "2022-09-13T03:28:50.0262681Z"
+    },
+    "appInsights1": {
+      "restored": true,
+      "restoreTime": "2022-09-13T03:29:15.6224029Z"
+    }
+  },
+  "parameters": {
+    "appInsights1.resourceGroupName": {
+      "Name": "appInsights1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "ApiPeliculas"
+    },
+    "appInsights1.subscriptionId": {
+      "Name": "appInsights1.subscriptionId",
+      "Type": "subscription",
+      "Value": "805bc935-0fa9-42ea-a390-1c21bb748e89"
+    }
+  }
+}

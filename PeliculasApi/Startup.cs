@@ -43,6 +43,11 @@ namespace PeliculasApi
                 }).CreateMapper()
             );
 
+            services.AddControllers(options =>
+            {
+                options.Filters.Add(typeof(FiltroErrores));
+            }).AddNewtonsoftJson();
+
 
             services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
